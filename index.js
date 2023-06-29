@@ -2,7 +2,7 @@ let data = {}
 const p = document.getElementById('display-grade');
 
 
-  Papa.parse("./DS-grades-S23-EECS.csv", {
+  Papa.parse("./StudentList-DSCI-2023-Spring-released.csv", {
 // Papa.parse("test.csv", {
     download: true,
     encoding: "utf-8",
@@ -25,26 +25,24 @@ const p = document.getElementById('display-grade');
 })
 
 function display() {
-    const id = document.getElementById('sid-mid').value;
+    const id = document.getElementById('sid').value;
     if (id=="") return;
     // p.innerText = JSON.stringify(data[id]);
     const display = `
     SID:${data[id].學號}
+    組別：
+    Group: ${data[id].Group}
     
-    各項作業分數：
+    各項分數：
     H1: ${data[id].HW1}
     H2: ${data[id].HW2}
     H3: ${data[id].HW3}
-    H4: ${data[id].HW4}
-    H5: ${data[id].HW5}
-    H6: ${data[id].HW6}
+    Proposal: ${data[id].Proposal}
+    Demo: ${data[id].Demo}
+    Report: ${data[id].Report}
 
-    考試分數：
-    Mid:${data[id].Mid}
-    Fin:${data[id].Fin}
-    
-    CPE加分項目：
-    CPE: ${data[id].CPE}
+    出席：
+    Attend:${data[id].Attend}
     
     學期總成績：
     Sem: ${data[id].Sem}
