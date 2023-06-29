@@ -45,10 +45,10 @@ function display() {
     Attend:${data[id].Attend}
     
     學期總成績：
-    Sem: ${data[id].Sem}
+    Sem: ${data[id].SEM}
     
     分數計算方式：
-    The grade is determined by the following rule: (H1+H2+H3+H4+H5+H6)/6*0.4+Mid*0.25+FIN*0.35+CPE.
+    The grade is determined by the following rule: (H1+H2+H3)/3*0.3+Proposal*0.2+Demo*0.2+Report*0.25+Attend.
     Note that the highest grade of this course is 99. If your final grade is large than 99, then you will get 99 at most.
     `;
     p.innerText = display;
