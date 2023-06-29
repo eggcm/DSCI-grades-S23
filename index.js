@@ -29,9 +29,9 @@ function display() {
     if (id=="") return;
     // p.innerText = JSON.stringify(data[id]);
     const display = `
+    
     SID:${data[id].學號}
-    組別：
-    Group: ${data[id].Group}
+    組別(Group): ${data[id].Group}
     
     各項分數：
     H1: ${data[id].HW1}
@@ -41,7 +41,7 @@ function display() {
     Demo: ${data[id].Demo}
     Report: ${data[id].Report}
 
-    出席：
+    出席(5pts MAX)：
     Attend:${data[id].Attend}
     
     學期總成績：
